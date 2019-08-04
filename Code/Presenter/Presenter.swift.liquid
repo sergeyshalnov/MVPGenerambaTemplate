@@ -1,0 +1,19 @@
+{% include 'header' %}
+
+import Foundation
+
+final class {{ module_info.name }}Presenter {
+  
+  private weak var output: I{{ module_info.name }}PresenterOutput?
+  
+  init(output: I{{ module_info.name }}PresenterOutput) {
+    self.output = output
+  }
+  
+}
+
+// MARK: - I{{ module_info.name }}PresenterInput
+
+extension {{ module_info.name }}Presenter: I{{ module_info.name }}PresenterInput {
+  
+}

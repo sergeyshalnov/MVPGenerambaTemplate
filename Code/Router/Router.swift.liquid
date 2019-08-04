@@ -1,0 +1,21 @@
+{% include 'header' %}
+
+import Foundation
+
+final class {{ module_info.name }}Router {
+  
+  weak var view: {{ module_info.name }}ViewController?
+  
+  // MARK: - Init
+  
+  init(view: {{ module_info.name }}ViewController) {
+    self.view = view
+  }
+  
+}
+
+// MARK: - I{{ module_info.name }}Router
+
+extension {{ module_info.name }}Router: I{{ module_info.name }}Router {
+  
+}

@@ -1,0 +1,15 @@
+{% include 'header' %}
+
+import Foundation
+
+final class {{ module_info.name }}Configurator: I{{ module_info.name }}Configurator {
+  
+  func configure(view: {{ module_info.name }}ViewController) {
+    let router = {{ module_info.name }}Router(view: view)
+    let presenter = {{ module_info.name }}Presenter(output: view)
+    
+    view.output = presenter
+    view.router = router
+  }
+  
+}

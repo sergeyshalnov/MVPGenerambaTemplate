@@ -1,0 +1,36 @@
+{% include 'header' %}
+
+import UIKit
+
+final class {{ module_info.name }}ViewController: UIViewController {
+  
+  // MARK: - Variables
+  
+  var output: I{{ module_info.name }}ViewOutput?
+  var router: I{{ module_info.name }}Router?
+  
+  // MARK: - Init
+  
+  init(configurator: I{{ module_info.name }}Configurator = {{ module_info.name }}Configurator()) {
+    super.init(nibName: nil, bundle: nil)
+    
+    configure(configurator: configurator)
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+  }
+  
+  // MARK: - Configure
+  
+  private func configure(configurator: I{{ module_info.name }}Configurator) {
+    configurator.configure(view: self)
+  }
+  
+}
+
+// MARK: - I{{ module_info.name }}ViewInput
+
+extension {{ module_info.name }}ViewController: I{{ module_info.name }}ViewInput {
+  
+}

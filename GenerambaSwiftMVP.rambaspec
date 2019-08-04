@@ -1,0 +1,32 @@
+# Template information section
+name: GenerambaSwiftMVP
+summary: MVP template
+author: Sergey Shalnov
+version: 1.0.0
+license: MIT
+
+# The declarations for code files
+code_files:
+# Configurator
+- {name: Configurator/IConfigurator.swift, custom_name: 'I{{ module_info.name }}Configurator.swift', path: Code/Configurator/IConfigurator.swift.liquid}
+- {name: Configurator/Configurator.swift, path: Code/Configurator/Configurator.swift.liquid}
+
+# View
+- {name: ViewController/ViewInput.swift, custom_name: 'I{{ module_info.name }}ViewInput.swift', path: Code/ViewController/IViewInput.swift.liquid}
+- {name: ViewController/ViewOutput.swift, custom_name: 'I{{ module_info.name }}ViewOutput.swift', path: Code/ViewController/IViewOutput.swift.liquid}
+- {name: ViewController/View.xib, path: Code/ViewController/View.xib.liquid}
+- {name: ViewController/View.swift, path: Code/ViewController/View.swift.liquid}
+- {name: ViewController/ViewController.swift, path: Code/ViewController/ViewController.swift.liquid}
+
+# Presenter
+- {name: Presenter/PresenterInput.swift, custom_name: 'I{{ module_info.name }}PresenterInput.swift', path: Code/Presenter/IPresenterInput.swift.liquid}
+- {name: Presenter/PresenterOutput.swift, custom_name: 'I{{ module_info.name }}PresenterOutput.swift', path: Code/Presenter/IPresenterOutput.swift.liquid}
+- {name: Presenter/Presenter.swift, path: Code/Presenter/Presenter.swift.liquid}
+
+# Router
+- {name: Router/IRouter.swift, custom_name: 'I{{ module_info.name }}Router.swift', path: Code/Router/IRouter.swift.liquid}
+- {name: Router/Router.swift, path: Code/Router/Router.swift.liquid}
+
+
+# Template dependencies
+dependencies:
